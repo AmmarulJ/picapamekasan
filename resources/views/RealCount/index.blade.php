@@ -59,6 +59,8 @@
             <thead class="border">
                 <tr>
                     <th class="text-center border">No</th>
+                    <th class="text-center border">Kecamatan</th>
+                    <th class="text-center border">Kelurahan</th>
                     <th class="text-center border">No TPS</th>
                     <th class="text-center border">Paslon1 : Fattah Jasin-Mujahid Ansori</th>
                     <th class="text-center border">Paslon2 : KH Kholilurrahman-Sukriyanto</th>
@@ -74,8 +76,9 @@
                 @foreach ($hasilSuara as $item)
                     <tr>
                         <td class="text-center border">{{ $loop->iteration }}</td>
-                        <td>Kecamatan{{ $item->Tps->kelurahan->kecamatan->nama }}-Kelurahan{{ $item->Tps->kelurahan->nama }}-TPS{{ $item->Tps->nama }}
-                        </td>
+                        <td class="text-center border">{{ $item->Tps->kelurahan->kecamatan->nama }}</td>
+                        <td class="text-center border">{{ $item->Tps->kelurahan->nama }}</td>
+                        <td class="text-center border">{{ $item->Tps->nama }}</td>
                         <td class="text-center border">{{ $item->paslon1 }}</td>
                         <td class="text-center border">{{ $item->paslon2 }}</td>
                         <td class="text-center border">{{ $item->paslon3 }}</td>
@@ -85,6 +88,8 @@
                             @foreach ($item->gambarBukti as $gambar)
                                 <img src="{{ asset('storage/' . $gambar->path) }}" alt="Gambar Bukti"
                                     style="max-width: 200px; margin: 10px;">
+                                <a href="{{ asset('storage/' . $gambar->path) }}" download="image"
+                                    class="btn btn-primary">Download Image</a>
                             @endforeach
                         </td>
 
