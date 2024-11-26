@@ -58,7 +58,7 @@
             <input type="hidden" name="Status" value="RealCount">
             <div class="mb-3">
                 <label for="tps" class="form-label">TPS:</label>
-                <select name="tps" class="form-control" id="tps">
+                <select name="tps" class="form-control dropdownSelect" id="tps">
                     <option value="">Pilih TPS</option>
                     @foreach ($tps as $item)
                         <option value="{{ $item->id }}">
@@ -68,16 +68,12 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="paslon1" class="form-label">Paslon 1: Fattah Jasin-Mujahid Ansori</label>
+                <label for="paslon1" class="form-label">Paslon 1: Fandi Akhmad Yani - Asluchul Alif</label>
                 <input type="number" class="form-control" name="paslon1" required>
             </div>
             <div class="mb-3">
-                <label for="paslon1" class="form-label">Paslon 2: KH Kholilurrahman-Sukriyanto</label>
-                <input type="number" class="form-control" name="paslon2" required>
-            </div>
-            <div class="mb-3">
-                <label for="paslon1" class="form-label">Paslon 3: M Baqir Aminatullah-Taufadi</label>
-                <input type="number" class="form-control" name="paslon3" required>
+                <label for="kotak_kosong" class="form-label">Kotak Kosong</label>
+                <input type="number" class="form-control" name="kotak_kosong" required>
             </div>
             <div class="mb-3">
                 <label for="paslon1" class="form-label">Suara Tidak Sah:</label>
@@ -99,9 +95,9 @@
     {{-- end of Form --}}
     <script>
         $(document).ready(function() {
-            document.title = "Quick Count - PICA";
+            document.title = "Real Count - PICA";
             $("#RealActive").addClass('active')
-
+            $('.dropdownSelect').select2();
             //bug search
             $(window).keydown(function(event) {
                 if (event.keyCode == 13) {

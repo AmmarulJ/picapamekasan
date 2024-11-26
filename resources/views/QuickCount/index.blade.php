@@ -62,9 +62,8 @@
                     <th class="text-center border">Kecamatan</th>
                     <th class="text-center border">Kelurahan</th>
                     <th class="text-center border">No TPS</th>
-                    <th class="text-center border">Paslon1 : Fattah Jasin-Mujahid Ansori</th>
-                    <th class="text-center border">Paslon2 : KH Kholilurrahman-Sukriyanto</th>
-                    <th class="text-center border">Paslon3 : M Baqir Aminatullah-Taufadi</th>
+                    <th class="text-center border">Paslon1 : Fandi Akhmad Yani - Asluchul Alif</th>
+                    <th class="text-center border">Kotak Kosong</th>
                     <th class="text-center border">Suara Tidak Sah</th>
                     <th class="text-center border">Jumlah Kehadiran</th>
                     <th class="text-center border">Gambar Bukti</th>
@@ -80,8 +79,7 @@
                         <td class="text-center border">{{ $item->Tps->kelurahan->nama }}</td>
                         <td class="text-center border">{{ $item->Tps->nama }}</td>
                         <td class="text-center border">{{ $item->paslon1 }}</td>
-                        <td class="text-center border">{{ $item->paslon2 }}</td>
-                        <td class="text-center border">{{ $item->paslon3 }}</td>
+                        <td class="text-center border">{{ $item->kotak_kosong }}</td>
                         <td class="text-center border">{{ $item->suara_tidak_sah }}</td>
                         <td class="text-center border">{{ $item->jumlah_kehadiran }}</td>
                         <td>
